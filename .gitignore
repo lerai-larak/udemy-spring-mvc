@@ -1,0 +1,12 @@
+#eclipse project files
+.classpath
+.project
+.settings
+
+#binaries
+.war
+.ear
+.class
+
+tomcat
+
