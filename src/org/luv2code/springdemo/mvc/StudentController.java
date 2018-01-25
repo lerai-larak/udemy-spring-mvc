@@ -25,7 +25,7 @@ public class StudentController {
 	@RequestMapping("/processForm")
 	public String processStudentForm(@ModelAttribute("student") Student theStudent){
 		//the annotation will cause the model attribute to be forwarded to the confirm page
-		System.out.println("The student: " + theStudent.getFirstName() + "  " + theStudent.getLastName());
+		System.out.println("The student: " + theStudent.getFirstName() + "  " + theStudent.getLastName() + "country: " + theStudent.getCountry());
 		return "student-confirmation";
 		
 	}
