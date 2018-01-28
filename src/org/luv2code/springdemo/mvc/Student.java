@@ -1,5 +1,6 @@
 package org.luv2code.springdemo.mvc;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -13,6 +14,7 @@ public class Student {
 	private LinkedHashMap <String, String> countryOptions;
 	private String country;
 	private String programmingLang;
+	private ArrayList<String> operatingSystems;
 	
 	
 	
@@ -69,8 +71,12 @@ public class Student {
 		this.programmingLang = programmingLang;
 	}
 
-		
-	
-	
-	
+	public ArrayList<String> getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(ArrayList<String> operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
+
 }
