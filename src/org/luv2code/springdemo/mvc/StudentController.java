@@ -1,5 +1,8 @@
 package org.luv2code.springdemo.mvc;
 
+import java.util.LinkedHashMap;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -9,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/student")
 public class StudentController {
 
+	@Value("#{programmingLanguages}") //read values from properties file
+	private LinkedHashMap <String,String> programmingLanguages;
 	
 	@RequestMapping("/showForm")
 	public String showForm(Model theModel) {
@@ -17,6 +22,9 @@ public class StudentController {
 		
 		//add student to model
 		theModel.addAttribute("student",student);
+		
+		//add prg lang options to model
+		theModel.addAttribute("pLangOptions",programmingLanguages);
 		return "student-form";
 		
 	}

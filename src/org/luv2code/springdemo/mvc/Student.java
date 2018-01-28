@@ -2,6 +2,7 @@ package org.luv2code.springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 //@Component
@@ -11,7 +12,9 @@ public class Student {
 	private String lastName;
 	private LinkedHashMap <String, String> countryOptions;
 	private String country;
-	private String programmingLanguage;
+	private String programmingLang;
+	
+	
 	
 	
 	
@@ -58,12 +61,12 @@ public class Student {
 		this.countryOptions = countryOptions;
 	}
 
-	public String getProgrammingLanguage() {
-		return programmingLanguage;
+	public String getProgrammingLang() {
+		return programmingLang;
 	}
 
-	public void setProgrammingLanguage(String programmingLanguage) {
-		this.programmingLanguage = programmingLanguage;
+	public void setProgrammingLang(String programmingLang) {
+		this.programmingLang = programmingLang;
 	}
 
 		

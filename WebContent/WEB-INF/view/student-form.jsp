@@ -10,10 +10,7 @@
 		First Name: <form:input path="firstName"/><br><br/>
 		Last Name: <form:input path="lastName"/><br><br/>
 		Programming Language:
-		Java <form:radiobutton path="programmingLanguage" value="Java"/>
-		C# <form:radiobutton path="programmingLanguage" value="C#"/>
-		Ruby <form:radiobutton path="programmingLanguage" value="Ruby"/>
-		PHP <form:radiobutton path="programmingLanguage" value="PHP"/>
+		<form:radiobuttons path="programmingLang" items="${pLangOptions}"></form:radiobuttons>
 		<br>
 		Country: 
 		<form:select path="country">
