@@ -6,6 +6,7 @@
 <title>Customer Confirmation Page</title>
 </head>
 <body>
-<p>Thanks ${customer.firstName} ${customer.lastName} for confirmation</p>
+<p>Thanks ${customer.firstName} ${customer.lastName}, age: ${customer.age} for confirmation</p>
+<br>Postal Code: ${customer.postalCode}
 </body>
 </html>

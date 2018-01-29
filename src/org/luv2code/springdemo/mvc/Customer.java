@@ -1,16 +1,27 @@
 package org.luv2code.springdemo.mvc;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Customer {
 	
+	@Min(value=0, message="Age too small")
+	@Max(value=90, message="Age too high")
+	@NotNull(message="WTF!...Age is required, ")
+	private Integer age;
+
 	private String firstName;
 	
 	//add validation rule for last name
 	@NotNull(message="WTF!...Last name is required, ")
 	@Size(min=1, message="is required")
 	private String lastName;
+	
+	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="Must be valid postal code length 5")
+	private String postalCode;
 	
 	
 	public String getFirstName() {
@@ -25,6 +36,19 @@ public class Customer {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+	
 	
 	
 
