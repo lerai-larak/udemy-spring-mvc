@@ -8,5 +8,6 @@
 <body>
 <p>Thanks ${customer.firstName} ${customer.lastName}, age: ${customer.age} for confirmation</p>
 <br>Postal Code: ${customer.postalCode}
+<br>Course Code: ${customer.courseCode}
 </body>
 </html>
